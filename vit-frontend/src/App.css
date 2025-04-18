@@ -1,0 +1,162 @@
+/* Reset & base */
+* {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f0f4fa;
+}
+
+/* Fullscreen layout */
+.container {
+  height: 150vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #eaf4ff, #ffffff);
+  padding: 5px;
+  margin-top: 325px;
+}
+
+/* Card */
+.card {
+  width: 100%;
+  max-width: 550px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.card-header {
+  background: #2b4a7c;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.card-header h2 {
+  margin: 0;
+  font-size: 1.7rem;
+}
+.card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Preview box */
+.preview-box {
+  width: 450px;
+  height: 450px;
+  margin: 0 auto;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  overflow: hidden;
+}
+.preview-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* File input */
+.file-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* center everything */
+  margin-top: 20px;
+}
+
+/* Styled label that looks like a button */
+.label {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #2b4a7c;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-bottom: 12px;
+}
+
+.label:hover {
+  background-color: #233b66;
+}
+
+/* Hide the native file input */
+.file-input {
+  display: none;
+}
+
+/* Optional: show selected file name below */
+.file-input-wrapper .file-name {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #555;
+  font-style: italic;
+}
+
+
+/* Button */
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2b4a7c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.button:disabled {
+  background: #6c7a93;
+  cursor: not-allowed;
+}
+.button:not(:disabled):hover {
+  background: #233b66;
+}
+
+/* Spinner */
+.spinner {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Report box */
+.report-box {
+  background: #f0f8ff;
+  border: 1px solid #b6d4fe;
+  border-radius: 8px;
+  padding: 14px;
+  color: #333;
+  white-space: pre-wrap;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  max-height: 300px;
+  overflow-y: auto;
+}
